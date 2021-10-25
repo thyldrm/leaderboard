@@ -1,0 +1,24 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.23.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "ioredis": "^4.28.0",
+    "mongoose": "^6.0.11",
+    "node-cron": "^3.0.0",
+    "path": "^0.12.7",
+    "redis": "^3.1.2",
+    "util": "^0.12.4"
+  }
+}

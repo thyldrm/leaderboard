@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+
+}
+.scoreColor{
+  background: linear-gradient( 135deg, #FDD819 10%, #E80505 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dataColor{
+  background: linear-gradient( 135deg, #F05F57 10%, #360940 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.userPicked{
+  background-color: rgb(163, 160, 160,0.3);
+}
+
