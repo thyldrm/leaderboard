@@ -10,14 +10,8 @@ const router = express.Router();
 router.post("/scores", async (req, res) => {
     try{
         const { username, score } = req.body;
-        const oldScore = await redis.zscore(process.env.KEY, username);
-        if (oldScore) {
             const result = await redis.zincrby(process.env.KEY, score, username);
             res.send({ result });
-        } else {
-            const result = await redis.zadd(process.env.KEY, score, username);
-            res.send({ result });
-        }
     }catch(err){
         res.send(err)
     }

@@ -46,7 +46,7 @@ const endOfWeekCalculateMoney = () => {
             } catch {}
         }
         const total = pool * 0.02;
-        const first100 = await redis.zrevrange(process.env.KEY, 0, 9);
+        const first100 = await redis.zrevrange(process.env.KEY, 0, 99);
         for (let i = 0; i < first100.length; i++) {
             let prize = 0;
             if (i == 0) {
@@ -56,7 +56,7 @@ const endOfWeekCalculateMoney = () => {
             } else if (i == 2) {
                 prize = total * 0.1;
             } else {
-                prize = (total * 0.55) / 3;
+                prize = (total * 0.55) / 97;
             }
             try {
                 const winningPlayer = await Player.findOne({
